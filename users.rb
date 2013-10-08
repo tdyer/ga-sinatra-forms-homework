@@ -17,9 +17,9 @@ get '/user/new' do
 end
 
 post '/user/create' do
-  params = params[:first_name]
-#  binding.pry
-#   User.create(params)
-#  erb :user_new
+params = @params
+  # binding.pry
+  @user = User.create(:first_name => params[:first_name], :last_name => params[:last_name], :email => params[:email])
+  erb :user_show
 end
 
