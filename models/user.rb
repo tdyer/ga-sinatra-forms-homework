@@ -10,7 +10,7 @@ class User < MemStore
     @first_name = options.fetch(:first_name, '')
     @last_name = options.fetch(:last_name, '')
     @email = options.fetch(:email, '')
-    @email = options.fetch(:description, '')
+    @password = options.fetch(:description, '')
     @active = false
   end
   
@@ -22,3 +22,4 @@ class User < MemStore
     return active
   end
 end
+
