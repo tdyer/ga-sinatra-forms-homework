@@ -1,0 +1,21 @@
+<section id='add'>
+  <form action="/user" method='post'>
+    First Name: <input type='text' name='first_name'></input>      
+    Last Name: <input type='text' name='last_name'></input>      
+    Email: <input type='text' name='email'></input>      
+    Description: <textarea name='content' placeholder="User Description &hellip;"></textarea>
+    <input type='submit' value='Add User'>
+  </form>
+</section>
+<% @users.each do |user| %>
+<article <%= 'class="complete"' if user.complete %>>
+  <p>
+    <%= user.content %>
+    <span><a href="/<%= user.id %>">[edit]</span>
+  </p>
+  <p class='links'>
+    <a href="/<%=user.id %>/complete">&#8623;</a>
+  </p>
+  <p class='meta'>Created: <%= user.created_at %></p>
+
+<% end %>
