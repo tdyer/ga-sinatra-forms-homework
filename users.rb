@@ -6,20 +6,22 @@ set :server, 'webrick'
 require_relative './models/user'
 
 get '/users' do
-  User.show_store
-end
-
-get '/user/show' do
+  @users = User.all
+  erb :list_users
 end
 
 get '/user/new' do
   erb :user_new
 end
 
+get '/user/:id' do
+  @user = User.find(@params[:id])
+  erb :user_show, :locals => { :user => @user}
+end
+
+
 post '/user/create' do
-  params = @params
-  # binding.pry
   @user = User.create(:first_name => params[:first_name], :last_name => params[:last_name], :email => params[:email])
-  erb :user_show
+  redirect "/user/#{@user.id}"
 end
 

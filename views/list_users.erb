@@ -1,0 +1,9 @@
+<h2> All Users </h2>
+<ul>
+  <% @users.each do |user| %>
+    <%= erb :user_show, :locals => {:user => user} %>
+    <br/>
+    <hr/>
+  <% end %>
+</ul>
+<a href='/user/new'>Create User</a>

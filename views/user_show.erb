@@ -1,3 +1,8 @@
-<p> First Name is <%= @user.first_name %></p>
-<p> Last Name is <%= @user.last_name %></p>
-<p> Email is <%= @user.email %> </p>
+<ul> User <%= user.name %>
+  <li> First Name is <%= user.first_name %></li>
+  <li> Last Name is <%= user.last_name %></li>
+  <li> Email is <%= user.email %> </li>
+  <li> ID is <%= user.id %> </li>
+</ul>
+<a href='/user/new'>Create User</a>
+<br/>

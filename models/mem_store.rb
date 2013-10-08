@@ -25,10 +25,13 @@ class MemStore
   end
 
   def self.all
-    all = []
-    return all unless @@store ||  @@store[self.name]
-    @@store[self.name].each { |k, v| all << v} 
-    all
+    all_instances = []
+    return all_instances if @@store.nil? || @@store[self.name].nil? ||  @@store[self.name].empty?
+    klass_instances = @@store[self.name]
+    klass_instances.each do |k, v|
+      all_instances << v
+    end
+    all_instances
   end
 
   def self.delete_all
