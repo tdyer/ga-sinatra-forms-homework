@@ -1,0 +1,25 @@
+# RSpec
+# Run:
+# rspec --init to create your .rspec and spec/spec_helper.rb files.
+
+# Add this to your ~/.pryrc
+# Pry.config.pager = false
+# Pry.config.color = true
+# Pry.commands.alias_command 'c', 'continue'
+# Pry.commands.alias_command 's', 'step'
+# Pry.commands.alias_command 'n', 'next'
+
+# Don't forget to add this to the top of you're spec/spec_helper.rb
+# require 'json'
+# require 'simplecov'
+# SimpleCov.start
+# When using Rails use:
+
+# Run
+# bundle exec guard --clear
+
+
+In your program, add the following near the top:
+
+require 'dotenv'
+Dotenv.load

@@ -1,0 +1,31 @@
+# https://github.com/github/gitignore/blob/master/Ruby.gitignore 
+*.gem
+*.rbc
+.bundle
+.config
+coverage
+InstalledFiles
+lib/bundler/man
+pkg
+rdoc
+spec/reports
+test/tmp
+test/version_tmp
+tmp
+
+# YARD artifacts
+.yardoc
+_yardoc
+doc/
+
+# Extras, not from github 
+.env
+.DS_Store
+Desktop.ini
+Thumbs.db
+.Spotlight-V100
+.Trashes
+
+# Emacs temp files
+*~
+*#*
