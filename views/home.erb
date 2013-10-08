@@ -8,9 +8,9 @@
   </form>
 </section>
 <% @users.each do |user| %>
-<article <%= 'class="complete"' if user.complete %>>
+<article <%= 'class="complete"' if user.activated? %>>
   <p>
-    <%= user.content %>
+    <%= user.description %>
     <span><a href="/<%= user.id %>">[edit]</span>
   </p>
   <p class='links'>

@@ -4,11 +4,11 @@ class User < MemStore
 
   attr_accessor :first_name, :last_name, :email, :password, :active
 
-  def initialize(first_name, last_name, options = { })
+  def initialize(options = { })
     super() # need the parens here!
     
-    @first_name = first_name
-    @last_name = last_name
+    @first_name = options.fetch(:first_name, '')
+    @last_name = options.fetch(:last_name, '')
     @email = options.fetch(:email, '')
     @email = options.fetch(:description, '')
     @active = false

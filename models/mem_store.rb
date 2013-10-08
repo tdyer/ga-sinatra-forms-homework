@@ -26,7 +26,8 @@ class MemStore
 
   def self.all
     all = []
-    @@store[self.name].each { |k, v| all << v}
+    return all unless @@store ||  @@store[self.name]
+    @@store[self.name].each { |k, v| all << v} 
     all
   end
 
